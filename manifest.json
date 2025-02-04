@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Udemy course schedule",
+  "description": "Browser extension to schedule udemy courses",
+  "version": "0.0",
+  "permissions": ["tabs", "storage"],
+  "host_permissions": ["*://www.udemy.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.udemy.com/course/*"],
+      "js": ["script.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "index.html"
+  }
+}
